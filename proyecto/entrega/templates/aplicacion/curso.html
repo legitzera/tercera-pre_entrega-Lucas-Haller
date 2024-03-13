@@ -1,0 +1,28 @@
+{% extends "entrega/index.html" %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Cursos</h1>
+{% endblock titulo %}
+
+
+{% block contenido %}
+    
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Curso</th>
+            <th>Camada</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for c in cursos  %}
+        <tr>
+            <td>{{ c.curso }}</td>
+            <td>{{ c.camada }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock contenido %}
